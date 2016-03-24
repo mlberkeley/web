@@ -1,0 +1,28 @@
+// Place all the styles related to the static controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+html, body {
+  color: #444;
+  font-size: 15px;
+}
+
+a {
+  color: #444 !important;
+}
+
+.card {
+  box-shadow: 1px 1px 1px 1px #eee;
+  margin: 1rem;
+}
+
+.card-img {
+  width: 100%;
+}
+
+.headers {
+  
+  margin: 1.5rem 0;
+}
+.thumbnail {
+  margin-top: 1rem;
+}
