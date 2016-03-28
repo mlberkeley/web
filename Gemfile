@@ -11,6 +11,7 @@ gem 'turbolinks'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'slim-rails'
 gem 'foundation-rails'
+gem 'koala', '~> 2.2'
 
 group :development, :test do
   gem 'byebug'

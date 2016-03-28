@@ -1,14 +1,12 @@
-
 div class="row"
   div class="small-4 columns"
     h5
       div class="headers"
-        a(href="/events/past")<< Previous Events
+        a(href="/events")<< Current Events
   div class="small-4 columns end"
     center
       h3
-        div class="headers"
-          = DateTime.parse(@events.first["start_time"]).strftime("%B %Y")
+        div class="headers" Past Events
 
 div class="row events"
   - for event in @events
@@ -23,5 +21,4 @@ div class="row events"
           = event["place"]["name"]
           div class="small-push-8"
             a class="hollow button" href="http://www.facebook.com/events/#{event["id"]}" >> Details
-
 = console
