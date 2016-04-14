@@ -1,7 +1,20 @@
 .top-bar#top-bar
-  .top-bar-right
-    ul.dropdown.vertical.medium-horizontal.menu
-      li: a(href="/about") About
-      li: a(href="/events") Events
-      li: a(href="#") Portfolio
-      li: a(href="#") Contact
+  .row
+    .top-bar-left.medium-horizontal
+      .logo
+        a(href="/") ML@B
+    .top-bar-right
+      ul.dropdown.vertical.medium-horizontal.menu
+        li: a(href="/about") About
+        li: a(href="/events") Events
+        li: .drop
+          a(href="#")
+            | Portfolio
+            .drop-container
+              .drop-elem
+                = link_to "ML@B|C", project_index_path
+                br
+              .drop-elem
+                = link_to "Research", research_project_index_path
+
+        li: a(href="/contact") Contact

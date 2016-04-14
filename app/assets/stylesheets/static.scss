@@ -1,17 +1,29 @@
-// Place all the styles related to the static controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+
 html {
   position: relative;
   min-height: 100%;
 }
+
 body {
-  color: #444;
+  font-family: 'Ubuntu', sans-serif;
+  color: #34495e;
   font-size: 15px;
 }
 
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Ubuntu', sans-serif;
+}
+
 a {
-  color: #444 !important;
+  color: #34495e !important;
+}
+
+a:hover {
+  color: #5e5e34 !important;
+}
+
+.breadcrumbs {
+  padding: 1rem;
 }
 
 .card {
@@ -25,15 +37,19 @@ a {
 
 .card-content {
   padding: 0.5rem;
+  text-overflow: ellipsis;
 }
 
+.content {
+  min-height: 100%;
+}
 .events {
   min-height: calc(100% - 200px);
 }
 
-.headers {
-
-  margin: 1.5rem 0;
+.logo {
+  font-size: x-large;
+  padding: 0.2rem;
 }
 .thumbnail {
   margin-top: 1rem;

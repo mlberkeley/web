@@ -1,0 +1,19 @@
+.row
+  ul.breadcrumbs
+    li: a(href="/") Home
+    li: a(href="/project") Portfolio
+    li: a(href="/project/research") Research
+  - for project in @projects
+   = link_to project
+    .small-12.medium-6.large-4.columns.end
+      .card
+        .card-img
+          = image_tag "placeholder.png"
+        .card-content
+          = project.name
+          '|
+          = project.industry
+          br
+          .descrip
+            =project.description
+            link_to project | ...

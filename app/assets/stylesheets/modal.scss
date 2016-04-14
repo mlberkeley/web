@@ -1,0 +1,23 @@
+#modal {
+  background-color: white;
+  left: 50%;
+  margin: -250px 0 0 -32%;
+  opacity: 1;
+  position: absolute;
+  top: -50%;
+  visibility: hidden;
+  width: 65%;
+  height: 65%;
+  box-shadow: 0 3px 7px rgba(0,0,0,.25);
+  box-sizing: border-box;
+  transition: all .4s ease-in-out;
+  -moz-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  z-index: 3;
+}
+
+#modal:target {
+  opacity: 1;
+  top: 50%;
+  visibility: visible
+}

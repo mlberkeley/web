@@ -2,22 +2,38 @@ div class="row"
   div class="small-4 columns"
     h5
       div class="headers"
-        a(href="/events")<< Current Events
+        h6
+          a(href="/events")<< Current Events
   div class="small-4 columns end"
     center
       h3
         div class="headers" Past Events
 
 div class="row events"
-  - for event in @events
-    div class="small-12 medium-6 large-4 columns end"
-      div class="card"
-        img src="//placehold.it/350x150" class="card-img"
-        div class="card-content"
-          = event["name"]
-          br
-          = DateTime.parse(event["start_time"]).strftime("%a, %b %d")
-          br
-          = event["place"]["name"]
-          div class="small-push-8"
-            a class="hollow button" href="http://www.facebook.com/events/#{event["id"]}" >> Details
+  - if !@events.empty?
+    - for event in @events
+      center
+        #modal
+          .modal-content
+            .header
+              h3 Event name
+            .copy
+              h5 More things coming here
+              a href="#"  X Close 
+          .overlay
+
+      div class="small-12 medium-6 large-4 columns end"
+        div class="card"
+          .card-img
+            = link_to "#modal"
+              =image_tag "placeholder.png"
+          div class="card-content"
+            = event["name"]
+            br
+            = DateTime.parse(event["start_time"]).strftime("%a, %b %d")
+            br
+            = event["place"]["name"]
+            div class="small-push-8"
+              a class="hollow button" href="http://www.facebook.com/events/#{event["id"]}" >> Details
+  - else
+    | We don't have any past events.

@@ -1,5 +1,6 @@
 class EventsController < ApplicationController
   def index
+    @q = get_events
     @events = get_events.select { |hash| hash["start_time"] > Time.now.beginning_of_day }
   end
 
