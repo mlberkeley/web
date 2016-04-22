@@ -1,5 +1,59 @@
-center
-  img src="http://lorempixel.com/1200/600"/
+#landing
+  .row.align-middle#landing-txt
+    .columns
+      h3 Machine Learning at Berkeley
+    .columns
+      h6 This can be either an image or another background color.
+#about
+  .row
+    center
+      h4 About Us
+    br
+    .small-4.columns
+      center
+        |Three things
+        br
+        |Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
 
-  h3
-    still looking for some landing page design here
+    .small-4.columns
+      center
+        |That represents(?)
+        br
+        |Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+    .small-4.columns.end
+      center
+        |ML@B
+        br
+        |Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+#events
+  .row
+    .small-12.medium-5.columns
+      = image_tag("ph2.png")
+    .small-12.medium-7.columns.end
+      center
+        h4 Events
+      | We organize events centered around Machine Learning and Data Science that are open to all.We organize events centered around Machine Learning and Data Science that are open to all.We organize events centered around Machine Learning and Data Science that are open to all.We organize events centered around Machine Learning and Data Science that are open to all.We organize events centered around Machine Learning and Data Science that are open to all.We organize events centered around Machine Learning and Data Science that are open to all.We organize events centered around Machine Learning and Data Science that are open to all.
+      br
+      br
+      a class="button" href="/events" Show all events
+
+#portfolios
+  .row
+    center
+      h4 Portfolio
+      h6
+        .submenu
+          = link_to "Industry", "#"
+        .submenu
+          = link_to "Research", "#"
+  br
+  - for project in @selected_projs
+   = link_to project
+    .small-12.medium-6.large-3.columns.end
+      .card
+        .card-img
+          = image_tag "placeholder.png"
+        .card-content
+          = project.name
+#contact
+  | contact form in progress
