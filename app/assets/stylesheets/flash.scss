@@ -1,0 +1,20 @@
+.alert-box {
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+  color: white;
+  position:fixed;
+  margin-top: 60px;
+}
+
+.error {
+  background-color: #fd4f57;
+}
+
+.success {
+  background-color: #1abc9c;
+}
+
+.notice {
+  // color not set
+}

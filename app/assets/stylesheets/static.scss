@@ -28,33 +28,26 @@ a:hover {
   padding: 1rem;
 }
 
-.card {
-  box-shadow: 1px 1px 1px 1px #ccc;
-  background-color: white;
-  margin: 1rem;
-}
-
-.card-img {
-  width: 100%;
-}
-
-.card-content {
-  padding: 0.5rem;
-  text-overflow: ellipsis;
-}
-
-.content {
+.contents {
   min-height: 100%;
   padding-top: 55px;
 }
 .events {
   min-height: calc(100% - 200px);
 }
-
+input {
+  font-family: 'Ubuntu', sans-serif !important;
+}
 .logo {
   font-size: x-large;
   padding: 0.2rem;
 }
+
+.no-float {
+  float: none !important;
+}
+
+
 .thumbnail {
   margin-top: 1rem;
 }
@@ -64,19 +57,19 @@ a:hover {
   clear: none;
 }
 
-a.button, a:link.button {
+a.button, a:link.button, form input.button {
   background-color: #1583cc !important;
   background-image: none;
   box-shadow: none;
   font-weight: normal;
   border-radius: 0;
-  padding: 1rem;
+  padding: 0.8rem 1rem;
   border: 1px solid #1583cc !important;
   text-shadow: none;
   color: white !important;
 }
 
-a.button:hover, a:link.button:hover {
+a.button:hover, a:link.button:hover, form input.button:hover {
   background-color: white !important;
   color: #1583cc !important;
   text-shadow: none;

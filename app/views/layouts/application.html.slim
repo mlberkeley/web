@@ -13,6 +13,9 @@ html lang="en"
 
   body
     == render 'layouts/header'
-    .content
+    == render 'layouts/flash'
+    .contents
       == yield
     == render 'layouts/footer'
+
+==console

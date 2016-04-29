@@ -56,4 +56,13 @@
         .card-content
           = project.name
 #contact
-  | contact form in progress
+  form data-abide="" accept-charset="UTF-8" action="/subscribe" method="post"
+    .row
+      center
+        h4 Subscribe to our mailing list
+      .small-12.medium-8.large-6.small-centered.columns.no-float
+        .input-group
+          input.input-group-field placeholder="Enter your email" required="" type="email" name="user[email]" /
+          .input-group-button
+            input.button type="submit" value="Submit" /
+        small * Please enter valid email address

@@ -14,7 +14,7 @@ gem 'foundation-rails'
 gem 'koala', '~> 2.2'
 gem 'devise'
 gem 'activeadmin', github: 'activeadmin'
-
+gem 'figaro'
 group :development, :test do
   gem 'byebug'
   gem 'rspec-rails', '~> 3.0'
