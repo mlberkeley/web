@@ -12,19 +12,20 @@ div class="row"
 
 div class="row events"
   - if !@events.empty?
-    - for event in @events
+    - (0..@events.length-1).to_a.each do |ind|
       div class="small-12 medium-6 large-4 columns end"
         div class="card"
           .card-img
             = link_to "#modal"
-              =image_tag "placeholder.png"
-          div class="card-content"
-            = event["name"]
+              =image_tag (@imgList[ind])
+          div class="card-content card-proj"
+            = @events[ind]["name"]
             br
-            = DateTime.parse(event["start_time"]).strftime("%a, %b %d")
+            = DateTime.parse(@events[ind]["start_time"]).strftime("%a, %b %d")
             br
-            = event["place"]["name"]
+            br
+            = @events[ind]["place"]["name"]
             div class="small-push-8"
-              a class="hollow button" href="http://www.facebook.com/events/#{event["id"]}" >> Details
+              a class="hollow button" href="http://www.facebook.com/events/#{@events[ind]["id"]}" >> Details
   - else
     | We don't have any upcoming events

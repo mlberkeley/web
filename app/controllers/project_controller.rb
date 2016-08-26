@@ -1,6 +1,6 @@
 class ProjectController < ApplicationController
   def index
-    @projects = Project.all
+    @projects = Project.where(tag: 'industry')
   end
 
   def show

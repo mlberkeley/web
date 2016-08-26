@@ -3,17 +3,25 @@
     li: a(href="/") Home
     li: a(href="/project") Portfolio
     li: a(href="/project/research") Research
+  h3
+    div class="headers" About
+  h6
+    Machine Learning at Berkeley's research division seeks to provide a platform for students and faculty to collaborate outside of the context of the many AI/ML research laboratories at Berkeley. We believe that landmark research in machine learning almost always comes from left field, and we cherish and encourage novelty in our division.
+    br
+    Our projects and papers are proposed by students and then backed over the course of each academic year into fully fledged research teams. The proposal process leads to a diverse group of projects each year exploring areas from deep reinforcement learning to statistical machine learning, harnessing the creativity and unique backgrounds of our members.
+
   - for project in @projects
    = link_to project
     .small-12.medium-6.large-4.columns.end
-      .card
+      .card.card-proj
         .card-img
-          = image_tag "placeholder.png"
+          = image_tag project.img_url
         .card-content
-          = project.name
-          '|
-          = project.industry
+          b = project.name
+          '    |
+          = project.tag
           br
           .descrip
             =project.description
+            |...
             link_to project | ...

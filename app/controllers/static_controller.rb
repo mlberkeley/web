@@ -2,7 +2,7 @@ class StaticController < ApplicationController
   skip_before_filter :verify_authenticity_token
 
   def index
-    @selected_projs = Project.last(4)
+    @selected_projs = Project.last(7)
   end
 
   def about
