@@ -24,7 +24,7 @@ div class="row events"
             = DateTime.parse(@events[ind]["start_time"]).strftime("%a, %b %d")
             br
             br
-            = @events[ind]["place"]["name"]
+            b = @events[ind]["place"]["name"]
             div class="small-push-8"
               a class="hollow button" href="http://www.facebook.com/events/#{@events[ind]["id"]}" >> Details
   - else

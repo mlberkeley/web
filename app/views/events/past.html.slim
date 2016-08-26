@@ -28,7 +28,7 @@ div class="row events"
             = link_to "#modal"
               =image_tag @imgList[ind]
           div class="card-content card-proj"
-            = @events[ind]["name"]
+            b = @events[ind]["name"]
             br
             = DateTime.parse(@events[ind]["start_time"]).strftime("%a, %b %d")
             br
