@@ -25,7 +25,7 @@ div class="row events"
       div class="small-12 medium-6 large-4 columns end"
         div class="card"
           .card-img
-            = link_to "#modal"
+            = link_to "http://www.facebook.com/events/#{@events[ind]["id"]}"
               =image_tag @imgList[ind]
           div class="card-content card-proj"
             b = @events[ind]["name"]
